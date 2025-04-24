@@ -6,14 +6,7 @@ async function runTest() {
     password: 'pass123',
   });
 
-  await axios.post('https://api.demoblaze.com/addtocart', {
-    cookie: token,
-    prod_id: 1,
-    id: '123',
-    flag: false
-  });
-
-  await axios.get('https://api.demoblaze.com/viewcart');
+  await axios.post('https://api.demoblaze.com/add');
 
   console.log('Test complete!');
 }

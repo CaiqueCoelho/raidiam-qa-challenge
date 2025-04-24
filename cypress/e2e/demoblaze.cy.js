@@ -1,4 +1,4 @@
-describe('User test', () => {
+describe('UI test', () => {
     it('should sign up and buy a product', () => {
       cy.visit('https://www.demoblaze.com');
       cy.wait(10000);
@@ -22,4 +22,18 @@ describe('User test', () => {
       cy.get('#card').type('123456');
       cy.get('.modal-footer > .btn-primary').click();
     });
+});
+
+describe.skip('Demoblaze API Test', () => {
+  it('logs in, adds product to cart and views cart', () => {
+    const username = 'user123';
+    const password = 'pass123';
+
+    cy.request('POST', 'https://api.demoblaze.com/login', {
+      username,
+      password
+    });
+    
+    cy.request('POST', 'https://api.demoblaze.com/add')
+  });
 });
