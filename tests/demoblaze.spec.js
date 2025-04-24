@@ -1,4 +1,5 @@
-const { test, expect } = require('@playwright/test');
+const { test } = require('@playwright/test');
+
 test('sign up and purchase product', async ({ page }) => {
   await page.goto('https://www.demoblaze.com');
   await page.waitForTimeout(10000);
@@ -20,4 +21,21 @@ test('sign up and purchase product', async ({ page }) => {
   await page.fill('#name', 'John');
   await page.fill('#card', '123456');
   await page.click('.modal-footer > .btn-primary');
+});
+
+test.describe.skip('Demoblaze API Test', () => {
+  test('logs in, adds product to cart and views cart', async () => {
+    const username = 'user123';
+    const password = 'pass123';
+
+    const requestContext = await request.newContext();
+
+    // Login request
+    const loginResponse = await requestContext.post('https://api.demoblaze.com/login', {
+      data: {
+        username,
+        password,
+      },
+    });
+  });
 });
