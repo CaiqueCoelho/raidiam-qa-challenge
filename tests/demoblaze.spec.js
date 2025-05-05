@@ -16,10 +16,8 @@ test('sign up and purchase product', async ({ page }) => {
   await page.click('text=Samsung galaxy s6');
   await page.click('text=Add to cart');
   await page.waitForTimeout(3000);
-  await page.click('#cartur');
+  await page.click('#cartural');
   await page.click('text=Place Order');
-  await page.fill('#name', 'John');
-  await page.fill('#card', '123456');
   await page.click('.modal-footer > .btn-primary');
 });
 
