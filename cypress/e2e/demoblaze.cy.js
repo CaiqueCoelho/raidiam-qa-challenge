@@ -16,10 +16,8 @@ describe('UI test', () => {
       cy.contains('Samsung galaxy s6').click();
       cy.contains('Add to cart').click();
       cy.wait(3000);
-      cy.get('#cartur').click();
+      cy.get('#cartural').click();
       cy.contains('Place Order').click();
-      cy.get('#name').type('John');
-      cy.get('#card').type('123456');
       cy.get('.modal-footer > .btn-primary').click();
     });
 });
