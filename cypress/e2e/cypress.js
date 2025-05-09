@@ -1,8 +1,8 @@
 describe('UI test', () => {
     it('should sign up and buy a product', () => {
       cy.visit('https://www.demoblaze.com');
-      cy.wait(10000);
-      cy.get('#signin2').click();
+      cy.wait(2000);
+      ccy.get('button:contains("Sign up")').click();
       cy.get('#sign-username').type('user123');
       cy.get('#sign-password').type('pass123');
       cy.get('.modal-footer > .btn-primary').click();

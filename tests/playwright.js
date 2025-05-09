@@ -2,8 +2,8 @@ const { test } = require('@playwright/test');
 
 test('sign up and purchase product', async ({ page }) => {
   await page.goto('https://www.demoblaze.com');
-  await page.waitForTimeout(10000);
-  await page.click('#signin2');
+  await page.waitForTimeout(2000);
+  await page.click('button:has-text("Sign up")');
   await page.fill('#sign-username', 'user123');
   await page.fill('#sign-password', 'pass123');
   await page.click('.modal-footer > .btn-primary');
