@@ -22,16 +22,16 @@ describe('UI test', () => {
     });
 });
 
-describe.skip('Demoblaze API Test', () => {
-  it('logs in, adds product to cart and views cart', () => {
-    const username = 'user123';
-    const password = 'pass123';
+// describe('Demoblaze API Test', () => {
+//   it('logs in, adds product to cart and views cart', () => {
+//     const username = 'user123';
+//     const password = 'pass123';
 
-    cy.request('POST', 'https://api.demoblaze.com/login', {
-      username,
-      password
-    });
+//     cy.request('POST', 'https://api.demoblaze.com/login', {
+//       username,
+//       password
+//     });
     
-    cy.request('POST', 'https://api.demoblaze.com/add')
-  });
-});
+//     cy.request('POST', 'https://api.demoblaze.com/add')
+//   });
+// });
